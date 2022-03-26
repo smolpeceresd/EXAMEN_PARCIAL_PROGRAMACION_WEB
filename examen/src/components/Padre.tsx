@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { cocktailFetcher } from './Logica';
-import { Buscador, Cabecera, Cocktails } from './Returns';
+import { Buscador, Cabecera, Cocktails, FootPage } from './Returns';
 import { cocktailsAPI, megaInput } from './Types';
 
 export const Padre: FC = ({ children }) => {
@@ -10,6 +10,7 @@ export const Padre: FC = ({ children }) => {
     useEffect(()=>{
         const result = async ()=>{
                 const listin: megaInput =await cocktailFetcher(nombreCocktail);
+                if(listin.drinks.length !== 0)
                 setListCocktail(listin);
         }
         result();
@@ -17,12 +18,9 @@ export const Padre: FC = ({ children }) => {
     return (
         <>
                 <Cabecera key={"Nolonecesita"}/>
-            <nav>
                 <Buscador key={"Nolonecesita2"} setText={setCocktail}/>
-            </nav>
-            <main>
                 <Cocktails key={nombreCocktail} list={listCocktail}/>
-            </main>
+                <FootPage key={"Nolonecesita3"}/>
         </>
     );
 }

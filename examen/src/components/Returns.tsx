@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
+import "../layout/style.css";
+import fondo from "./img/logo.png"
 import { cocktailsAPI, megaInput } from './Types';
 
 
@@ -13,8 +15,8 @@ type inputList = {
 
 export const Cabecera: FC = () => {
     return (
-        <header>
-            <p>COCTAIL API</p>
+        <header className="Cabecera" >
+            <img src={fondo} />
         </header>
     )
 }
@@ -26,163 +28,113 @@ export const Buscador: FC<inputBuscador> = ({ setText }) => {
         setText(texto)
     }
     return (
-        <DivBuscador>
-            <INPUT_ type="text" placeholder="Shearch your planet" value={text}
-                onChange={(e) => distribuir(e.target.value as string)} />
-        </DivBuscador>
+        <nav>
+            <DivBuscador>
+                <INPUT_ type="text" placeholder="Shearch your planet" value={text}
+                    onChange={(e) => distribuir(e.target.value as string)} />
+            </DivBuscador>
+        </nav>
     )
 }
 
 export const Cocktails: FC<inputList> = ({ list }) => {
+    const [index, setIndex] = useState<number>(0);
+    useEffect(() => {
+        setIndex(-1);
+    }, [list])
     return (
-        <Container>
-            {
-                (list.drinks).map((cocktail) => {
+        <main>
+            <ContainerList>
+                <List>
+                    {list.drinks.map((cocktail) => {
+                        return (
+                            <Cocktail>
+                                <img src={cocktail.strDrinkThumb} height="120px" width="-webkit-fill-available" />
+                                <div>
+                                    <p>{cocktail.strDrink}</p>
+                                </div>
+                            </Cocktail>
+                        )
+                    })}
+                </List>
+            </ContainerList>
+        </main>
+    )
+}
 
-                    return (
-                        <Cocktail>
-                            <Info>
-                            <img src={cocktail.strDrinkThumb} width="180" height="180" />
-                            <p>{cocktail.strDrink}</p>
-                            </Info>
-                            <Ingredients>
-                                {cocktail.strIngredient1!==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient1}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient1}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient2 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient2}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient2}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient3 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient3}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient3}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient4 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient4}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient4}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient5 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient5}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient5}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient6 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient6}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient6}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient7 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient7}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient7}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient8 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient8}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient8}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient9 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient9}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient9}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient10 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient10}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient10}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient11 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient11}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient11}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient12 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient12}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient12}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient13 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient13}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient13}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient14 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient14}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient14}</p>
-                                    </div>
-                                }
-                                {cocktail.strIngredient15 !==null &&
-                                    <div>
-                                        <img src={`https://www.thecocktaildb.com/images/ingredients/${cocktail.strIngredient15}-Medium.png`} width="180" height="180" />
-                                        <p>{cocktail.strIngredient15}</p>
-                                    </div>
-                                }
-                            </Ingredients>
-                        </Cocktail>
-                    )
-                })
-            }
-
-        </Container>
+export const FootPage: FC = () => {
+    return (
+        <footer>
+            <p>🍸🥃<b>Created by Santiago Molpeceres Díaz</b>🥃🍸</p>
+        </footer>
     )
 }
 
 
 //STYLED
 
+const Cabecita = styled.div`
+
+
+
+`
+
 const DivBuscador = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-height: -webkit-fill-available;
+height:98px;;
 justify-content: space-evenly;
+background: linear-gradient(360deg, rgba(52,50,51,1) 20%, rgba(90,80,64,1) 40%, rgba(223,186,109,1) 100%);
 
 `
-
-const Container = styled.div`
-    display: flex;
-    flex-direction: colum;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background: black;
-`
-
 const INPUT_ = styled.input`
-
+height: 46%;
+    width: 524px;
+    text-align: center;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    
 `
+
+const ContainerList = styled.div`
+    display: block;
+    background-color: #343233;
+    height: -webkit-fill-available;
+    width: 50%;
+    padding: 10px;
+`
+const List = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fill-available;
+    overflow-y: auto;
+    padding: 9px;
+`
+
 
 const Cocktail = styled.div`
-    background: linear-gradient(white, black);
+display: flex;
+flex-direction: column;
+background: linear-gradient(180deg, rgba(169,169,169,1) 20%, rgba(255,255,255,1) 100%);
+width: 136px;
+margin: 5px;
+& p{
+    text-align: center; 
+    color:white;
+}
+& div{
+    display: flex;
+    justify-content:center;
+}
 
-    & p{
-        text-align: center; 
-        color:white;
-    }
 `
 const Info = styled.div`
 display: flex;
 flex-direction: column;
-    align-items: center;
-
+align-items: center;
 `
 const Ingredients = styled.div`
     display: flex;
