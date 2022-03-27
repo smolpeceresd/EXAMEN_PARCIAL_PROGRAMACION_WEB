@@ -158,6 +158,11 @@ export const Cocktails: FC<inputList> = ({ list }) => {
                             }
                         </Ingredients>
                     </Info>
+                    <Menu>
+                        <Boton1>
+
+                        </Boton1>
+                    </Menu>
                     
             </ContinerInfo>
         </main>
@@ -235,17 +240,26 @@ const ContinerInfo = styled.div`
 display: flex;
 background: #7ab5a8;
 height: -webkit-fill-available;
+align-items: center;
+flex-direction: column;
 width: 50%;
 padding: 10px;
 `
 
 const Info = styled.div`
 display: flex;
-height: -webkit-fill-available;
+height: 85%;
 align-items: center;
 `
-const Menu = styled.div``
-
+const Menu = styled.div`
+display: block;
+height: -webkit-fill-available;
+width: -webkit-fill-available;
+`
+const Boton1 = styled.button`
+height: 68px;
+width: 50%;
+`
 
 const Foto = styled.div`
 width: 50%;
