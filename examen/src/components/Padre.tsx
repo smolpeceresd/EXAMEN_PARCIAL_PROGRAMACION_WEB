@@ -10,6 +10,7 @@ export const Padre: FC = ({ children }) => {
     useEffect(()=>{
         const result = async ()=>{
                 const listin: megaInput =await cocktailFetcher(nombreCocktail);
+                console.log(listin.drinks);
                 if(listin.drinks.length !== 0)
                 setListCocktail(listin);
         }
