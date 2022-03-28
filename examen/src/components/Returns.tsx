@@ -157,8 +157,9 @@ export const Cocktails: FC<inputList> = ({ list }) => {
                                         <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient15}-Medium.png`} width="180px" height="180px" />
                                         <p>{(info as cocktailsAPI).strIngredient15}</p>
                                     </div>}
+                                    <br/>
+                                    <p>Instructions: {(info as cocktailsAPI).strInstructions}</p>
                             </Ingredients>
-
                             {list.drinks.indexOf(info as cocktailsAPI) !== list.drinks.length-1 &&
                                 <a className="boton2" href="javascript:;"
                                     onClick={() => setInfo(list.drinks[list.drinks.indexOf(info as cocktailsAPI) + 1])}>
@@ -276,6 +277,10 @@ const Ingredients = styled.div`
     overflow-y: auto;
     padding: 9px;
     & div p{
+        text-align: center;
+        color:white;
+    }
+    & p{
         text-align: center;
         color:white;
     }
