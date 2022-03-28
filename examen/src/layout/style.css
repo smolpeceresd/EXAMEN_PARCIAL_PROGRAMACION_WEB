@@ -5,7 +5,6 @@ header {
 
 .Cabecera img {
     width: -webkit-fill-available;
-    ;
 }
 
 main {
@@ -14,9 +13,45 @@ main {
     background: #343233;
 }
 
+.boxes {
+    cursor: pointer;
+    text-decoration: none;
+    color: transparent;
+}
+
+.boton1 {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    color: transparent;
+    align-items: center;
+}
+
+.boton2 {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    color: transparent;
+    align-items: center;
+}
+
+.boton1 img {
+    transform: rotate(90deg);
+}
+
+.boton2 img {
+    transform: rotate(-90deg);
+}
+
 .imgCocktail {
     border-top-right-radius: 20px 20px;
     border-top-left-radius: 20px 20px;
+}
+
+.imgCocktail2 {
+    border: 5px solid white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
 }
 
 footer {

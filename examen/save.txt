@@ -1,0 +1,105 @@
+            <ContinerInfo>
+                    <Info>
+                        <Foto>
+                            <img src={(info as cocktailsAPI).strDrinkThumb} height="100%" width="100%" />
+                        </Foto>
+                        <Ingredients>
+                            {(info as cocktailsAPI).strIngredient1 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient1}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient1}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient2 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient2}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient2}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient3 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient3}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient3}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient4 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient4}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient4}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient5 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient5}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient5}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient6 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient6}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient6}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient7 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient7}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient7}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient8 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient8}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient8}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient9 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient9}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient9}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient10 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient10}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient10}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient11 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient11}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient11}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient12 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient12}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient12}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient13 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient13}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient13}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient14 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient14}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient14}</p>
+                                </div>
+                            }
+                            {(info as cocktailsAPI).strIngredient15 !== null &&
+                                <div>
+                                    <img src={`https://www.thecocktaildb.com/images/ingredients/${(info as cocktailsAPI).strIngredient15}-Medium.png`} width="180px" height="180px" />
+                                    <p>{(info as cocktailsAPI).strIngredient15}</p>
+                                </div>
+                            }
+                        </Ingredients>
+                    </Info>
+                    <Menu>
+                        <Boton1>
+
+                        </Boton1>
+                    </Menu>
+                    
+            </ContinerInfo>
