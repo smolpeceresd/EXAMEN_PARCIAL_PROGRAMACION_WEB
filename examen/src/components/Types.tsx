@@ -2,6 +2,7 @@ import React from 'react';
 
 export type cocktailsAPI={
     strDrink: string,
+    strTags: string,
     strDrinkThumb:string,
     strIngredient1: string,
     strIngredient2:  string,

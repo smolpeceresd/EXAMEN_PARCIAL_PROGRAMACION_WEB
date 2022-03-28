@@ -79,6 +79,7 @@ export const Cocktails: FC<inputList> = ({ list }) => {
                             <Foto>
                                 <img className="imgCocktail2" src={(info as cocktailsAPI).strDrinkThumb} height="100%" width="100%" />
                                 <p>{info.strDrink}</p>
+                                <p>{info.strTags}</p>
                             </Foto>
                             <Ingredients>
                                 {(info as cocktailsAPI).strIngredient1 !== null &&
