@@ -6,11 +6,6 @@ import fondo from "./img/logo.png"
 import boton from "./img/Boton.png"
 import { cocktailsAPI, megaInput } from './Types';
 
-enum VISTAS {
-    DETALLE = "detalle",
-    ARRAY = "array"
-}
-
 type inputBuscador = {
     setText: (text: string) => void;
 }
@@ -44,7 +39,6 @@ export const Buscador: FC<inputBuscador> = ({ setText }) => {
 }
 
 export const Cocktails: FC<inputList> = ({ list }) => {
-    const [vista, setVista] = useState<VISTAS>(VISTAS.ARRAY);
     const [info, setInfo] = useState<cocktailsAPI | undefined>(undefined);
     useEffect(() => {
         setInfo(undefined);
