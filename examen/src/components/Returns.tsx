@@ -161,6 +161,9 @@ export const Cocktails: FC<inputList> = ({ list }) => {
                                 </a>
                             }
                         </Info>
+                        <div>
+                            
+                        </div>
                     </>
                 }
             </ContainerList>
